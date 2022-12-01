@@ -18,10 +18,6 @@ class Register(CreateView):
     success_url = reverse_lazy('login')
 
 
-# def handle_page_not_found(request):
-#     return redirect('homepage')
-
-
 class DeleteUserView(LoginRequiredMixin, DeleteView):
     """Класс удаления юзера"""
     login_url = 'login'

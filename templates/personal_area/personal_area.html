@@ -29,10 +29,8 @@
                   </div>
                     <div class="item-body">
                       <h3>Имя: {{ user.get_username }}</h3>
-                      <p>Описание профиля: {{ user.user_info }}</p>
                       <p><a href="{% url 'delete_user' user.id %}"><strong>Удалить профиль?
                       </strong></a></p>
-
                       {% for choice in question.choice_set.all %}
                         <p>{{ choice.choice_text }} -- {{ choice.votes }} ответов</p>
                       {% endfor %}
