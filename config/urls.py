@@ -20,9 +20,9 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('catalog/', include('users.urls')),
+    path('catalog/', include('polls.urls')),
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
-    path('users/', include('django.contrib.auth.urls')),
+    path('polls/', include('polls.urls')),
+    path('polls/', include('django.contrib.auth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
